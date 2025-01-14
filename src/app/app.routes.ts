@@ -7,6 +7,7 @@ import { BookManagementComponent } from './book-management/book-management.compo
 import { BorrowReturnComponent } from './borrow-return/borrow-return.component';
 import { SearchFilterComponent } from './search-filter/search-filter.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,5 +17,6 @@ export const routes: Routes = [
     {path: 'book-management',component: BookManagementComponent},
     {path: 'borrow-return',component: BorrowReturnComponent},
     {path: 'search-filter',component: SearchFilterComponent},
-    {path: 'feedback',component: FeedbackComponent}
+    {path: 'feedback',component: FeedbackComponent},
+    {path: 'welcome',component:WelcomeComponent}
 ];
