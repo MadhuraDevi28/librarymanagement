@@ -26,7 +26,7 @@ export class LoginPageComponent implements OnInit
     }); 
   }
   
-  loginUser(): void {console.log(this.userForm.value)
+  login(): void {console.log(this.userForm.value)
   }
 } 
 
