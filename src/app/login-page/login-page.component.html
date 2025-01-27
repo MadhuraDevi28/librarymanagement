@@ -1,21 +1,14 @@
-<head>
-    <title>Login</title>
-</head>
-<body>
-    <div class="login-container">
+<div class="fm">
+<div class="login-container">
         <h2>Login</h2>
         <form [formGroup]="userForm" (ngSubmit)="login()">
             <div class="form-group">
                 <label for="email">Email ID</label>
-                <input type="email" id="email"formControlName="emailId" name="email" required>
+                <input type="email" id="email" formControlName="emailId" name="email" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password"formControlName="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="role">Role</label>
-                <input type="text" id="role" name="role"formControlName="role" placeholder="Admin,User,staff">
+                <input type="password" id="password" formControlName="password" name="password" required>
             </div>
             <div class="buttons">
                 <button type="submit" class="login-btn">Login</button>
@@ -26,4 +19,4 @@
             <a href="forgetpassword">Forgot Password?</a> | <a href="register">Register</a>
         </div>
     </div>
-</body>
+</div>
