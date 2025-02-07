@@ -10,7 +10,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { RegisterComponent } from './register/register.component';
-
+import{ AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+ 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home',component: HomePageComponent},
@@ -22,5 +23,6 @@ export const routes: Routes = [
     {path: 'feedback',component: FeedbackComponent},
     {path: 'welcome',component:WelcomeComponent},
     {path:'forgetpassword',component:ForgetPasswordComponent},
-    {path:'register',component:RegisterComponent}
+    {path:'register',component:RegisterComponent},
+    {path:'admindashboard',component:AdminDashboardComponent}
 ];
