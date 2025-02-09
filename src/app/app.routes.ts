@@ -10,7 +10,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { RegisterComponent } from './register/register.component';
-import{ AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import{AdminDashboardComponent} from'./admin-dashboard/admin-dashboard.component';
+import { BorrowAndReturmDetailsComponent } from './borrow-and-returm-details/borrow-and-returm-details.component';
+
  
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -24,5 +26,7 @@ export const routes: Routes = [
     {path: 'welcome',component:WelcomeComponent},
     {path:'forgetpassword',component:ForgetPasswordComponent},
     {path:'register',component:RegisterComponent},
-    {path:'admindashboard',component:AdminDashboardComponent}
+    {path:'admin-dashboard',component:AdminDashboardComponent},
+    {path:'borrow-and-returm-details',component:BorrowAndReturmDetailsComponent}
+    
 ];

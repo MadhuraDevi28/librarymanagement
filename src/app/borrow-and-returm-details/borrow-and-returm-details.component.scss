@@ -1,0 +1,71 @@
+/* Full screen white background */
+.borrow-return-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers vertically */
+    min-height: 100vh; /* Ensures full-screen height */
+    width: 100%;
+    background-color: #ffffff; /* Full white background */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Heading styling */
+.borrow-return-container h2 {
+    color: #333; /* Dark gray for better contrast */
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Table styling */
+.borrow-return-container table {
+    width: 90%; /* Makes table responsive */
+    max-width: 1000px; /* Limits max width for readability */
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header styling */
+.borrow-return-container th {
+    background-color: #007bff; /* Blue header */
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Table cell styling */
+.borrow-return-container td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px; /* Increase font size for visibility */
+    color: #333; /* Darker text for better readability */
+}
+
+/* Alternate row colors */
+.borrow-return-container tr:nth-child(even) {
+    background-color: #f8f9fa; /* Light gray for alternate rows */
+}
+
+/* Hover effect for rows */
+.borrow-return-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Make table responsive */
+@media (max-width: 768px) {
+    .borrow-return-container table {
+        width: 100%;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .borrow-return-container th,
+    .borrow-return-container td {
+        padding: 8px;
+    }
+}

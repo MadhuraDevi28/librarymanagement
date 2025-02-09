@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { AdminHeaderComponent } from '../admin/admin-header/admin-header.component';
+
 
 @Component({
   selector: 'app-borrow-return',
-  imports: [],
+  imports: [AdminHeaderComponent],
+  standalone:true,
   templateUrl: './borrow-return.component.html',
   styleUrl: './borrow-return.component.scss'
 })

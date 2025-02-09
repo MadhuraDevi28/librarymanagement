@@ -1,1 +1,69 @@
-<p>borrow-return works!</p>
+<app-admin-header></app-admin-header>
+<div class="dashboard">
+    <div class="content">
+      
+      <div class="borrow-return">
+        <h2>Borrow and Return</h2>
+        <form class="entry-form">
+          <h3>Enter Borrow/Return Details</h3>
+          <div class="form-row">
+            <label for="book-no">Book No:</label>
+            <input type="text" id="book-no" placeholder="Enter Book No">
+          </div>
+          <div class="form-row">
+            <label for="book-name">Book Name:</label>
+            <input type="text" id="book-name" placeholder="Enter Book Name">
+          </div>
+          <div class="form-row">
+            <label for="author">Author:</label>
+            <input type="text" id="author" placeholder="Enter Author">
+          </div>
+          <div class="form-row">
+            <label for="borrowed-by">Borrowed By:</label>
+            <input type="text" id="borrowed-by" placeholder="Enter Borrower's Name">
+          </div>
+          <div class="form-row">
+            <label for="borrowed-date">Borrowed Date:</label>
+            <input type="date" id="borrowed-date">
+          </div>
+          <div class="form-row">
+            <label for="returning-date">Returning Date:</label>
+            <input type="date" id="returning-date">
+          </div>
+          <button type="submit">Add Entry</button>
+        </form>
+    
+        <table>
+          <thead>
+            <tr>
+              <th>Book No</th>
+              <th>Book Name</th>
+              <th>Author</th>
+              <th>Borrowed By</th>
+              <th>Borrowed Date</th>
+              <th>Returning Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1001</td>
+              <td>Introduction to HTML</td>
+              <td>John Doe</td>
+              <td>Jane Smith</td>
+              <td>2024-02-01</td>
+              <td>2024-02-15</td>
+            </tr>
+            <tr>
+              <td>1002</td>
+              <td>CSS Basics</td>
+              <td>Jane Doe</td>
+              <td>John Smith</td>
+              <td>2024-01-20</td>
+              <td>2024-02-03</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
