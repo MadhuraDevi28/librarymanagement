@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule, EmailValidator } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserdetailsService } from '../service/userdetails.service';
 
 @Component({
   selector: 'app-login-page',
@@ -12,8 +14,11 @@ export class LoginPageComponent implements OnInit
 
 {
   userForm!: FormGroup;
+  
   constructor(
     private fb: FormBuilder,
+    private userdetailsService:UserdetailsService,
+    private router:Router,
   ){}
   ngOnInit(): void {this.initialiseForm();
     
@@ -26,7 +31,11 @@ export class LoginPageComponent implements OnInit
     }); 
   }
   
-  login(): void {console.log(this.userForm.value)
+  login(): void {
+    this.userdetailsService.login(this.userForm.value).subscribe((response)=>{
+      this.router.navigate(['/home']);
+    });
   }
+  
 } 
 
