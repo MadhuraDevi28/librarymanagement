@@ -1,0 +1,48 @@
+.feedback-container {
+    margin: 40px auto;
+    text-align: center;
+    background: white;
+    height: 100vh;
+    width: 90%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    input {
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #0e0d0d;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        border-color: #0e0d0d;
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #0e0d0d;
+            text-align: center;
+            color: #333; // Change this to any color you want (e.g., white, black, or a custom color)
+        }
+
+        th {
+            background:#f4a261;
+            color: white;
+            cursor: pointer;
+        }
+
+        tbody tr:hover {
+            background: #5c5b5b;
+        }
+    }
+}

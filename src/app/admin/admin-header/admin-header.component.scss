@@ -23,6 +23,7 @@
           text-align: center;
           cursor: pointer;
           transition: 0.3s;
+          
   
           &:hover {
             background: #34495e;
@@ -37,7 +38,7 @@
       width: 100%;
   
       .dashboard-header {
-        background: #007bff;
+        background: hsl(33, 100%, 50%);
         color: white;
         padding: 10px;
         text-align: center;
@@ -62,7 +63,7 @@
           h3 {
             font-size: 36px;
             margin-bottom: 10px;
-            color: #007bff;
+            color: hsl(33, 100%, 50%);
           }
   
           p {

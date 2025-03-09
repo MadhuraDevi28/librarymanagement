@@ -1,8 +1,10 @@
 import { Component , OnInit } from '@angular/core';
+import { UserHeaderComponent } from '../user-header/user-header.component';
 
 @Component({
   selector: 'app-book-catlog',
-  imports: [],
+  imports: [UserHeaderComponent],
+  standalone:true,
   templateUrl: './book-catlog.component.html',
   styleUrl: './book-catlog.component.scss'
 })

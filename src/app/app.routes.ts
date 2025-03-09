@@ -12,10 +12,13 @@ import { ForgetPasswordComponent } from './forget-password/forget-password.compo
 import { RegisterComponent } from './register/register.component';
 import{AdminDashboardComponent} from'./admin-dashboard/admin-dashboard.component';
 import { BorrowAndReturmDetailsComponent } from './borrow-and-returm-details/borrow-and-returm-details.component';
+import{ ProfileComponent } from'./profile/profile.component';
+import { FeedbackReviewComponent } from './feedback-review/feedback-review.component';
+import{ReportComponent } from './report/report.component';
 
  
 export const routes: Routes = [
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: '', redirectTo: 'welcome', pathMatch: 'full'},
     {path: 'home',component: HomePageComponent},
     {path: 'login',component: LoginPageComponent},
     {path: 'book-catlog',component: BookCatlogComponent},
@@ -27,6 +30,9 @@ export const routes: Routes = [
     {path:'forgetpassword',component:ForgetPasswordComponent},
     {path:'register',component:RegisterComponent},
     {path:'admin-dashboard',component:AdminDashboardComponent},
-    {path:'borrow-and-returm-details',component:BorrowAndReturmDetailsComponent}
+    {path:'borrow-and-returm-details',component:BorrowAndReturmDetailsComponent},
+    {path:'profile',component:ProfileComponent},
+    {path:'feedback-review',component:FeedbackReviewComponent},
+    {path:'report',component:ReportComponent}
     
 ];

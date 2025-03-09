@@ -1,0 +1,36 @@
+<app-admin-header></app-admin-header>
+<div class="feedback-container">
+    <h2> User Feedback Reviews</h2>
+
+    <!-- Search Bar -->
+    <input type="text" id="searchInput" onkeyup="searchFeedback()" placeholder="Search by book name or author...">
+
+    <!-- Feedback Table -->
+    <table id="feedbackTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Book Name </th>
+                <th onclick="sortTable(1)">Author </th>
+                <th onclick="sortTable(2)">Rating </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Introduction to HTML</td>
+                <td>John Doe</td>
+                <td>⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td>CSS Basics</td>
+                <td>Jane Smith</td>
+                <td>⭐⭐⭐⭐⭐</td>
+            </tr>
+            <tr>
+                <td>JavaScript Essentials</td>
+                <td>Mark Johnson</td>
+                <td>⭐⭐⭐</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

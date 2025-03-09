@@ -1,71 +1,80 @@
-/* Full screen white background */
+/* Full-screen background with better padding */
 .borrow-return-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centers vertically */
-    min-height: 100vh; /* Ensures full-screen height */
+    min-height: 100vh;
     width: 100%;
-    background-color: #ffffff; /* Full white background */
+    background-color: #ffffff;
     padding: 20px;
     box-sizing: border-box;
+    background-position: center;
 }
 
-/* Heading styling */
+/* Heading Styling */
 .borrow-return-container h2 {
-    color: #333; /* Dark gray for better contrast */
-    margin-bottom: 20px;
-    font-size: 24px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent dark background */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 28px;
+    font-weight: bold;
     text-align: center;
 }
 
-/* Table styling */
+/* Table Styling */
 .borrow-return-container table {
-    width: 90%; /* Makes table responsive */
-    max-width: 1000px; /* Limits max width for readability */
+    width: 90%;
+    max-width: 1000px;
     border-collapse: collapse;
     background: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* Table header styling */
+/* Table Header Styling */
 .borrow-return-container th {
-    background-color: #007bff; /* Blue header */
+    background-color: #f4a261; /* Orange header */
     color: white;
     font-weight: bold;
-    padding: 12px;
+    padding: 14px;
     text-align: left;
+    font-size: 18px;
 }
 
-/* Table cell styling */
+/* Table Cell Styling */
 .borrow-return-container td {
     padding: 12px;
-    border: 1px solid #ddd;
-    font-size: 16px; /* Increase font size for visibility */
-    color: #333; /* Darker text for better readability */
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
 }
 
-/* Alternate row colors */
+/* Last Row Border Fix */
+.borrow-return-container tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Alternate Row Colors */
 .borrow-return-container tr:nth-child(even) {
-    background-color: #f8f9fa; /* Light gray for alternate rows */
+    background-color: #f8f9fa;
 }
 
-/* Hover effect for rows */
+/* Hover Effect */
 .borrow-return-container tr:hover {
-    background-color: #f1f1f1;
+    background-color: #a59999;
 }
 
-/* Make table responsive */
+/* Responsive Styling */
 @media (max-width: 768px) {
     .borrow-return-container table {
         width: 100%;
-        font-size: 14px; /* Adjust font size for smaller screens */
+        font-size: 14px;
     }
 
     .borrow-return-container th,
     .borrow-return-container td {
-        padding: 8px;
+        padding: 10px;
     }
 }

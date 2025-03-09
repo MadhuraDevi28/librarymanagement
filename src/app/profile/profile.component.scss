@@ -1,0 +1,89 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+}
+
+.profile-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 3px solid #007bff;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:disabled {
+    background: #e9ecef;
+    cursor: not-allowed;
+}
+
+.profile-actions {
+    margin-top: 15px;
+}
+
+.save-btn, .logout-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.save-btn {
+    background: #007bff;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.logout-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #0056b3;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
