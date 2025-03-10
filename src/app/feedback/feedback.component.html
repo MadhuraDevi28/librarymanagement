@@ -1,11 +1,12 @@
 <app-user-header></app-user-header>
 <div class="feedback-page">
-    <h6>feedback</h6>
+    <h6>Feedback</h6>
     <table>
         <tr>
             <th>Book Name</th>
             <th>Author</th>
             <th>Rating</th>
+            <th>Comment</th> <!-- New Comment Column -->
         </tr>
         <tr>
             <td>Introduction to HTML</td>
@@ -24,6 +25,12 @@
                     <label for="star1-1">★</label>
                 </div>
             </td>
+            <td>
+                <textarea placeholder="Write your comment here..." rows="2" cols="30"></textarea>
+            </td>
+            <td>
+                <button onclick="submitFeedback('rating1', 'comment1')">Submit</button> <!-- Submit Button -->
+            </td>
         </tr>
         <tr>
             <td>CSS Basics</td>
@@ -41,6 +48,12 @@
                     <input type="radio" id="star1-2" name="rating2" value="1">
                     <label for="star1-2">★</label>
                 </div>
+            </td>
+            <td>
+                <textarea placeholder="Write your comment here..." rows="2" cols="30"></textarea>
+            </td>
+            <td>
+                <button onclick="submitFeedback('rating2', 'comment2')">Submit</button> <!-- Submit Button -->
             </td>
         </tr>
     </table>

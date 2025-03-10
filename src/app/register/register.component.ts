@@ -26,27 +26,23 @@ export class RegisterComponent implements OnInit {
   initialiseForm(): void {
     this.userForm = this.fb.group({
       name: ['', Validators.required],
-      class: ['', Validators.required],
+      userClass: ['', Validators.required],
       registerNo: ['', Validators.required],
       emailId: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       role: ['', Validators.required],
       confirmPassword: ['', Validators.required],
-      mobile: ['', Validators.required]
+      mobileNo: ['', Validators.required],
     });
   }
 
   submit(): void {
     if (this.userForm.valid) {
-      // Call the service to register the user
       this.userdetailsService.registerUser(this.userForm.value).subscribe({
         next: (response: any) => {
           console.log('Registration successful:', response);
-          this.router.navigate(['/login']);  // Navigate to login page on success
+          this.router.navigate(['/login']); 
         },
-        error: (err: any) => {
-          console.error('Registration failed:', err);
-        }
       });
     } else {
       console.log('Form is invalid');
