@@ -14,12 +14,17 @@ export interface UserBooksHistory {
   providedIn: 'root',
 })
 export class UserBooksHistoryService {
-  private baseUrl = 'http://localhost:8080/borrow-and-return'; // Backend URL
+  private baseUrl = 'http://localhost:8080/api/borrow-and-return'; // Backend URL
 
   constructor(private http: HttpClient) {}
 
   // Get user book history by user ID
   getUserBooksHistory(userId: string): Observable<UserBooksHistory[]> {
     return this.http.get<UserBooksHistory[]>(`${this.baseUrl}?userid=${userId}`);
+  }
+
+  // Create a new user book history
+  createUserBooksHistory(userBooksHistory: UserBooksHistory): Observable<UserBooksHistory> {
+    return this.http.post<UserBooksHistory>(`${this.baseUrl}/create`, userBooksHistory);
   }
 }
