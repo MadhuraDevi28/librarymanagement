@@ -1,6 +1,8 @@
 <app-user-header></app-user-header>
+
 <div class="borrow-return-container">
-  <h2></h2>
+  <h2>Borrow and Return History</h2>
+
   <table>
     <thead>
       <tr>
@@ -12,19 +14,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Introduction to HTML</td>
-        <td>John Doe</td>
-        <td>2024-02-05</td>
-        <td>2024-02-15</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>CSS Basics</td>
-        <td>Jane Smith</td>
-        <td>2024-02-08</td>
-        <td>2024-02-18</td>
+      <tr *ngFor="let record of borrowedBooks; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ record.bookName }}</td>
+        <td>{{ record.author }}</td>
+        <td>{{ record.borrowDate }}</td>
+        <td>{{ record.returnDate }}</td>
       </tr>
     </tbody>
   </table>

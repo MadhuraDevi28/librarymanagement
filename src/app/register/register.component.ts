@@ -38,14 +38,18 @@ export class RegisterComponent implements OnInit {
 
   submit(): void {
     if (this.userForm.valid) {
+      console.log('Form Data:', this.userForm.value); // Debugging
       this.userdetailsService.registerUser(this.userForm.value).subscribe({
         next: (response: any) => {
           console.log('Registration successful:', response);
-          this.router.navigate(['/login']); 
+          this.router.navigate(['/login']);
         },
+        error: (err) => {
+          console.error('Error occurred:', err);
+        }
       });
     } else {
-      console.log('Form is invalid');
+      console.log('Form is invalid:', this.userForm.errors);
     }
   }
 }

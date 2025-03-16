@@ -1,50 +1,27 @@
 <app-user-header></app-user-header>
 <body class="booklist">
   <h1>Book Catalog</h1>
+  
   <table>
-      <thead>
-          <tr>
-              <th>SI.No</th>
-              <th>Title</th>
-              <th>Author</th>
-              <th>Category</th>
-              <th>Availability</th>
-              <th>Cupboard Number</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>1</td>
-              <td>The Great Gatsby</td>
-              <td>F. Scott Fitzgerald</td>
-              <td>Fiction</td>
-              <td>Available</td>
-              <td>1A</td>
-          </tr>
-          <tr>
-             <td>2</td>
-              <td>Introduction to Algorithms</td>
-              <td>Thomas H. Cormen</td>
-              <td>Education</td>
-              <td>Checked Out</td>
-              <td>3A</td>
-          </tr>
-          <tr>
-              <td>3</td>
-              <td>Harry Potter and the Philosopher's Stone</td>
-              <td>J.K. Rowling</td>
-              <td>Fantasy</td>
-              <td>Available</td>
-              <td>2A</td>
-          </tr>
-          <tr>
-              <td>4</td>
-              <td>To Kill a Mockingbird</td>
-              <td>Harper Lee</td>
-              <td>Classic</td>
-              <td>Available</td>
-              <td>23A</td>
-          </tr>
-      </tbody>
+    <thead>
+      <tr>
+        <th>SI.No</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Availability</th>
+        <th>Cupboard Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ book.bookName }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.category }}</td>
+        <td>{{ book.availability }}</td>
+        <td>{{ book.location }}</td>
+      </tr>
+    </tbody>
   </table>
 </body>
