@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Book {
+cupboardNo: any;
   bookId?: number;
   bookName: string;
   category?: string;

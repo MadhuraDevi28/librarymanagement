@@ -28,6 +28,7 @@ export class BookCatlogComponent implements OnInit {
     createTimestamp: '',
     updateTimestamp: '',
     bookNo: 0,
+    cupboardNo: undefined,
   };
 
   constructor(private booksService: BooksService) {}
@@ -67,6 +68,7 @@ export class BookCatlogComponent implements OnInit {
       (data) => {
         this.books.push(data);
         this.newBook = {
+          cupboardNo:'',
           bookName: '',
           category: '',
           author: '',

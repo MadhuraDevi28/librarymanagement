@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserHeaderComponent } from '../user-header/user-header.component';
 import { UserBooksHistoryService } from '../service/books-history.service';
 import { BooksService } from '../service/books.service';
+import { NgFor } from '@angular/common';
 
 interface BorrowedBookDetails {
   siNo: number;
@@ -12,7 +13,7 @@ interface BorrowedBookDetails {
 }
 @Component({
   selector: 'app-feedback',
-  imports: [UserHeaderComponent],
+  imports: [UserHeaderComponent, NgFor],
   standalone:true,
   templateUrl: './feedback.component.html',
   styleUrl: './feedback.component.scss'

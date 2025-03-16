@@ -3,14 +3,18 @@
     <h6>Feedback</h6>
     <table>
         <tr>
+            <th>SI NO</th>
             <th>Book Name</th>
             <th>Author</th>
             <th>Rating</th>
-            <th>Comment</th> <!-- New Comment Column -->
+            <th>Comment</th> 
+            <th></th>
         </tr>
-        <tr>
-            <td>Introduction to HTML</td>
-            <td>John Doe</td>
+        <tr *ngFor="let record of borrowedBooks; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ record.bookName }}</td>
+            <td>{{ record.author }}</td>
+            
             <td>
                 <div class="rating">
                     <input type="radio" id="star5-1" name="rating1" value="5">
@@ -32,29 +36,6 @@
                 <button onclick="submitFeedback('rating1', 'comment1')">Submit</button> <!-- Submit Button -->
             </td>
         </tr>
-        <tr>
-            <td>CSS Basics</td>
-            <td>Jane Smith</td>
-            <td>
-                <div class="rating">
-                    <input type="radio" id="star5-2" name="rating2" value="5">
-                    <label for="star5-2">★</label>
-                    <input type="radio" id="star4-2" name="rating2" value="4">
-                    <label for="star4-2">★</label>
-                    <input type="radio" id="star3-2" name="rating2" value="3">
-                    <label for="star3-2">★</label>
-                    <input type="radio" id="star2-2" name="rating2" value="2">
-                    <label for="star2-2">★</label>
-                    <input type="radio" id="star1-2" name="rating2" value="1">
-                    <label for="star1-2">★</label>
-                </div>
-            </td>
-            <td>
-                <textarea placeholder="Write your comment here..." rows="2" cols="30"></textarea>
-            </td>
-            <td>
-                <button onclick="submitFeedback('rating2', 'comment2')">Submit</button> <!-- Submit Button -->
-            </td>
-        </tr>
+        
     </table>
 </div>

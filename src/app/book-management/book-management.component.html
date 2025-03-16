@@ -1,181 +1,33 @@
 <app-admin-header></app-admin-header>
+
 <div class="dashboard">
-<div class="content">
-<div class="booksmanage-container">
-    <div class="booksmanage">
+  <div class="content">
+    <div class="booksmanage-container">
+      <div class="booksmanage">
         <h2>Book Management</h2>
+
         <table>
+          <thead>
             <tr>
-                <th>SI No</th>
-                <th>Book No</th>
-                <th>Book Name</th>
-                <th>Author</th>
-                <th>Purchase Detail</th>
-                <th>Purchase Date</th>
-                <th>Quantity</th>
-                <th>Returned Details</th>
+              <th>SI No</th>
+              <th>Book</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Availability</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>1001</td>
-                <td>Introduction to HTML</td>
-                <td>John Doe</td>
-                <td>Online Purchase</td>
-                <td>2024-02-09</td>
-                <td>5</td>
-                <td>2 (Returned to Main Library)</td>
+          </thead>
+          <tbody>
+            <tr *ngFor="let book of books; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ book.bookName }}</td>
+              <td>{{ book.author }}</td>
+              <td>{{ book.category }}</td>
+              <td>{{ book.availability ? 'Available' : 'Not Available' }}</td>
+
             </tr>
-            <tr>
-                <td>2</td>
-                <td>1002</td>
-                <td>CSS Basics</td>
-                <td>Jane Smith</td>
-                <td>Bookstore</td>
-                <td>2024-01-15</td>
-                <td>3</td>
-                <td>1 (Returned to Branch Library)</td>
-            </tr><tr>
-                <td>3</td>
-                <td>BK103</td>
-                <td>Computer Networks</td>
-                <td>Andrew S. Tanenbaum</td>
-                <td>Donated</td>
-                <td>2021-05-20</td>
-                <td>5</td>
-                <td>None</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>BK104</td>
-                <td>Operating System Concepts</td>
-                <td>Silberschatz, Galvin</td>
-                <td>Book Fair</td>
-                <td>2023-03-25</td>
-                <td>8</td>
-                <td>3 Returned</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>BK105</td>
-                <td>Artificial Intelligence: A Modern Approach</td>
-                <td>Stuart Russell</td>
-                <td>Online Purchase</td>
-                <td>2022-08-14</td>
-                <td>6</td>
-                <td>None</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>BK106</td>
-                <td>Computer Programming and Simulation</td>
-                <td>Rajaraman.V</td>
-                <td>Library Fund</td>
-                <td>2021-11-30</td>
-                <td>4</td>
-                <td>1 Returned</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>BK107</td>
-                <td>Let Us C</td>
-                <td>Yashavant Kanetkar</td>
-                <td>Book Fair</td>
-                <td>2020-06-18</td>
-                <td>12</td>
-                <td>5 Returned</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>BK107</td>
-                <td>Let Us C</td>
-                <td>Yashavant Kanetkar</td>
-                <td>Book Fair</td>
-                <td>2020-06-18</td>
-                <td>12</td>
-                <td>5 Returned</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>BK108</td>
-                <td>Python Crash Course</td>
-                <td>Eric Matthes</td>
-                <td>Donated</td>
-                <td>2023-02-10</td>
-                <td>9</td>
-                <td>2 Returned</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>BK109</td>
-                <td>Java: The Complete Reference</td>
-                <td>Herbert Schildt</td>
-                <td>Online Purchase</td>
-                <td>2021-07-29</td>
-                <td>10</td>
-                <td>3 Returned</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>BK110</td>
-                <td>Head First Java</td>
-                <td>Kathy Sierra</td>
-                <td>Library Fund</td>
-                <td>2022-09-15</td>
-                <td>6</td>
-                <td>1 Returned</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>BK111</td>
-                <td>The Pragmatic Programmer</td>
-                <td>Andrew Hunt</td>
-                <td>Book Fair</td>
-                <td>2020-04-20</td>
-                <td>7</td>
-                <td>None</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>BK112</td>
-                <td>Clean Code</td>
-                <td>Robert C. Martin</td>
-                <td>Online Purchase</td>
-                <td>2023-06-11</td>
-                <td>5</td>
-                <td>2 Returned</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>BK113</td>
-                <td>Design Patterns</td>
-                <td>Erich Gamma</td>
-                <td>Library Fund</td>
-                <td>2021-12-25</td>
-                <td>6</td>
-                <td>None</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>BK114</td>
-                <td>Data Structures and Algorithms in Java</td>
-                <td>Robert Lafore</td>
-                <td>Donated</td>
-                <td>2022-10-08</td>
-                <td>8</td>
-                <td>1 Returned</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>BK115</td>
-                <td>Introduction to the Theory of Computation</td>
-                <td>Michael Sipser</td>
-                <td>Online Purchase</td>
-                <td>2023-09-22</td>
-                <td>7</td>
-                <td>None</td>
-            </tr>
+          </tbody>
         </table>
+      </div>
     </div>
-</div>
-</div>
+  </div>
 </div>
